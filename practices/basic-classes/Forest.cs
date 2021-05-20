@@ -43,12 +43,17 @@ namespace BasicClasses
       }
     }
 
-    // CONSTRUCTOR METHOD
+    // CONSTRUCTOR METHODS
     public Forest(string name, string biome)
     {
-      Name = name;
-      Biome = biome;
-      Age = 0;
+      this.Name = name;
+      this.Biome = biome;
+      this.Age = 0;
+    }
+
+    public Forest(string name) : this(name, "Unknown")
+    {
+      Console.WriteLine("Default biome value is set to be 'Unknown'");
     }
 
     // METHODS
