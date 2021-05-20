@@ -5,10 +5,10 @@ namespace BasicClasses
   class Forest
   {
     // Fields -- pieces of class data
-    public string name;
+    private string name;
     // public int trees; // Can omit field when using automatic properties
-    public int age;
-    public string biome;
+    // public int age;
+    private string biome;
 
     // Property -- provide access to fields
 
@@ -21,6 +21,8 @@ namespace BasicClasses
 
     // Automatic properties
     public int Trees { get; set; }
+
+    public int Age { get; private set; }
 
     public string Biome
     {
