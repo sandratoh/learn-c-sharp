@@ -6,22 +6,21 @@ namespace BasicClasses
   {
     // Fields -- pieces of class data
     public string name;
-    public int trees;
+    // public int trees; // Can omit field when using automatic properties
     public int age;
     public string biome;
 
     // Property -- provide access to fields
+
+    // Basic property pattern
     public string Name
     {
       get { return name; }
       set { name = value; }
     }
 
-    public int Trees
-    {
-      get { return trees; }
-      set { trees = value; }
-    }
+    // Automatic properties
+    public int Trees { get; set; }
 
     public string Biome
     {
