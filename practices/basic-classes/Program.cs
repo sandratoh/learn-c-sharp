@@ -6,11 +6,9 @@ namespace BasicClasses
   {
     static void Main(string[] args)
     {
-      Forest f = new Forest();
-      f.Name = "Amazon";
+      Forest f = new Forest("Amazon", "Tropical");
       f.Trees = 1123;
       //   f.Age = 200; // Error: set accessor is inaccessible
-      f.Biome = "Tropical";
 
       Console.WriteLine(f.Name);
     }

@@ -4,14 +4,13 @@ namespace BasicClasses
 {
   class Forest
   {
-    // Fields -- pieces of class data
+    // FIELDS -- pieces of class data
     private string name;
     // public int trees; // Can omit field when using automatic properties
     // public int age;
     private string biome;
 
-    // Property -- provide access to fields
-
+    // PROPERTIES -- provide access to fields
     // Basic property pattern
     public string Name
     {
@@ -24,6 +23,7 @@ namespace BasicClasses
 
     public int Age { get; private set; }
 
+    // Basic property pattern with setter validatioin
     public string Biome
     {
       get { return biome; }
@@ -41,6 +41,29 @@ namespace BasicClasses
             break;
         }
       }
+    }
+
+    // CONSTRUCTOR METHOD
+    public Forest(string name, string biome)
+    {
+      Name = name;
+      Biome = biome;
+      Age = 0;
+    }
+
+    // METHODS
+    public int Grow()
+    {
+      Trees += 30;
+      Age++;
+      return Trees;
+    }
+
+    public int Burn()
+    {
+      Trees -= 20;
+      Age++;
+      return Trees;
     }
   }
 }
