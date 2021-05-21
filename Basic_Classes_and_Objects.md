@@ -110,7 +110,9 @@ public string Size
 
 - `private` - a private member can only be accessed by code in the same class
 
-- **Encapsulation** ~ defensive coding: need to use `public` and `private` together to encapsulate our classes
+- **Encapsulation**: the process of bundling related data and methods into a data type
+
+  - ~ defensive coding: need to use `public` and `private` together to encapsulate our classes
 
 - Good practice:
 

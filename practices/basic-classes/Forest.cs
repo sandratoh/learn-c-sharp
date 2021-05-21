@@ -9,6 +9,21 @@ namespace BasicClasses
     // public int trees; // Can omit field when using automatic properties
     // public int age;
     private string biome;
+    private static int forestsCreated; // static members pertaining only to class
+
+    // CONSTRUCTORS
+    public Forest(string name, string biome)
+    {
+      this.Name = name;
+      this.Biome = biome;
+      this.Age = 0;
+      Forest.ForestsCreated++;
+    }
+
+    public Forest(string name) : this(name, "Unknown")
+    {
+      Console.WriteLine("Default biome value is set to be 'Unknown'");
+    }
 
     // PROPERTIES -- provide access to fields
     // Basic property pattern
@@ -43,18 +58,7 @@ namespace BasicClasses
       }
     }
 
-    // CONSTRUCTOR METHODS
-    public Forest(string name, string biome)
-    {
-      this.Name = name;
-      this.Biome = biome;
-      this.Age = 0;
-    }
-
-    public Forest(string name) : this(name, "Unknown")
-    {
-      Console.WriteLine("Default biome value is set to be 'Unknown'");
-    }
+    public static int ForestsCreated { get; private set; }
 
     // METHODS
     public int Grow()
