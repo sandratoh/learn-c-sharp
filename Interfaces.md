@@ -25,6 +25,8 @@ interface IAutomobile
 
 - Define members in interface through our class
 
+- A class can implement multiple interfaces
+
 ```c#
 class Sedan : IAutomobile
 {
@@ -39,5 +41,8 @@ class Sedan : IAutomobile
 ## Constraints of Interfaces
 
 - Cannot specify two types of members:
+
   1. Constructors
   2. Fields
+
+- Remove duplicated code in classes with _inheritance_
