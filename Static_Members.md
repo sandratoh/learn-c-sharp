@@ -45,3 +45,24 @@ class Forest
   }
 }
 ```
+
+## Static Constructors
+
+- _static constructor_ is run once before a class is used
+
+- Constructor runs when either of these events happen:
+
+  1. before an object is made from the type
+  2. before a static member is accessed
+
+- Static constructor does NOT accept access modifiers
+
+- Typically used to set values to static fields and properties
+
+```c#
+class Forest
+{
+  static Forest()
+  { /* ... */ }
+}
+```

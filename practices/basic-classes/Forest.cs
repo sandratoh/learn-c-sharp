@@ -26,6 +26,13 @@ namespace BasicClasses
       Console.WriteLine("Default biome value is set to be 'Unknown'");
     }
 
+    // Static constructor
+    static Forest()
+    {
+      Forest.treeFacts = "Forests provide a diversity of ecosystem services including:\r\n  aiding in regulating climate.\r\n  purifying water.\r\n  mitigating natural hazards such as floods.\n";
+      Forest.ForestsCreated = 0;
+    }
+
     // PROPERTIES -- provide access to fields
     // Basic property pattern
     public string Name

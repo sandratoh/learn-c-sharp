@@ -21,6 +21,8 @@ namespace BasicClasses
       f.Grow();
 
       Console.WriteLine(f.Trees);
+
+      Forest.PrintTreeFacts();
     }
   }
 }
