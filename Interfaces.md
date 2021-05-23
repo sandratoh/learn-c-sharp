@@ -35,3 +35,9 @@ class Sedan : IAutomobile
   }
 }
 ```
+
+## Constraints of Interfaces
+
+- Cannot specify two types of members:
+  1. Constructors
+  2. Fields
