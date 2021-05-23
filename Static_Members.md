@@ -66,3 +66,24 @@ class Forest
   { /* ... */ }
 }
 ```
+
+## Static Classes
+
+- A static class cannot be instantiated
+
+- Only make a class static if you are making a library or utility - don't need specific instances and don't store new information.
+
+  - Eg: `Math` or `Console`
+
+- Rarely create static classes of our own
+
+```c#
+// Only do this if the class is a tool!
+static class Forest {}
+```
+
+```c#
+// Two static classes calling two static methods
+Math.Min(34, 54);
+Console.WriteLine("yeehaw!");
+```
