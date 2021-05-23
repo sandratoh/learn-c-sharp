@@ -10,6 +10,7 @@ namespace BasicClasses
     // public int age;
     private string biome;
     private static int forestsCreated; // static members pertaining only to class
+    private static string treeFacts;
 
     // CONSTRUCTORS
     public Forest(string name, string biome)
@@ -38,7 +39,7 @@ namespace BasicClasses
 
     public int Age { get; private set; }
 
-    // Basic property pattern with setter validatioin
+    // Basic property pattern with setter validation
     public string Biome
     {
       get { return biome; }
@@ -58,7 +59,13 @@ namespace BasicClasses
       }
     }
 
-    public static int ForestsCreated { get; private set; }
+    // Static property
+    public static int ForestsCreated
+    {
+      get { return forestsCreated; }
+      private set { forestsCreated = value; }
+    }
+    public static string TreeFacts { get; }
 
     // METHODS
     public int Grow()
@@ -73,6 +80,12 @@ namespace BasicClasses
       Trees -= 20;
       Age++;
       return Trees;
+    }
+
+    // Static methods
+    public static void PrintTreeFacts()
+    {
+      Console.WriteLine(Forest.TreeFacts);
     }
   }
 }

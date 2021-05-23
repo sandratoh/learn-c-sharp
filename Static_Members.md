@@ -26,3 +26,22 @@ static void Main(string[] args)
   Console.WriteLine(Forest.Definition);
 }
 ```
+
+## Static Methods
+
+- Define behaviours that apply to the class itself
+
+- Add `static` keyword after access modifier (`public` or `private`) to **both** the field and the method
+
+  - Why? Because static members can only access other static members (can NOT access instance members)
+
+```c#
+class Forest
+{
+  private static string definition; // Must add `static` here or will have error
+  public static void Define()
+  {
+    Console.WriteLine(definition);
+  }
+}
+```
