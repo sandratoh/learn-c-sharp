@@ -13,8 +13,25 @@
 ```c#
 interface IAutomobile
 {
-  string Id { get; }
+  string LicensePlate { get; }
   void Vroom();
   // Note how property and method bodies are not defined
+}
+```
+
+## Implementing an Interface
+
+- Implement interface into class using colon syntax `:`
+
+- Define members in interface through our class
+
+```c#
+class Sedan : IAutomobile
+{
+  public string LicensePlate { get; }
+  public void Vroom()
+  {
+    Console.WriteLine("Zoom zoom...");
+  }
 }
 ```
