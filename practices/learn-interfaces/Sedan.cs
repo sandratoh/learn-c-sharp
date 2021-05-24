@@ -5,10 +5,8 @@ namespace LearnInterfaces
   class Sedan : Vehicle, IAutomobile
   {
     // Constructor
-    public Sedan(double speed)
+    public Sedan(double speed) : base(speed)
     {
-      this.Speed = speed;
-      this.LicensePlate = Tools.GenerateLicensePlate();
       this.Wheels = 4;
     }
   }

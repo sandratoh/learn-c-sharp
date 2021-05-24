@@ -5,11 +5,9 @@ namespace LearnInterfaces
   class Truck : Vehicle, IAutomobile
   {
     // Constructors
-    public Truck(double speed, double weight)
+    public Truck(double speed, double weight) : base(speed)
     {
-      this.Speed = speed;
       this.Weight = weight;
-      this.LicensePlate = Tools.GenerateLicensePlate();
       this.Wheels = Weight < 400 ? 8 : 12;
     }
 
