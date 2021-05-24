@@ -11,7 +11,7 @@ namespace LearnInheritance
     }
 
     // Method overrides
-    public void SpeedUp()
+    public override void SpeedUp()
     {
       Speed += 5;
       if (Speed > 15)
