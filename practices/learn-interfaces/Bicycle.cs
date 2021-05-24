@@ -28,5 +28,10 @@ namespace LearnInheritance
         Speed = 0;
       }
     }
+
+    public override string Describe()
+    {
+      return $"This bicycle is moving on {Wheels} wheels at {Speed} km/h, with license plate {LicensePlate}.";
+    }
   }
 }

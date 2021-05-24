@@ -20,6 +20,12 @@ namespace LearnInterfaces
       Console.WriteLine($"Truck with license plate {t.LicensePlate} and {t.Wheels} wheels, driving at {t.Speed} km/h.");
       t.SpeedUp();
       Console.WriteLine($"Truck's faster speed: {t.Speed}");
+
+      Bicycle b = new Bicycle(10);
+
+      Console.WriteLine(s.Describe());
+      Console.WriteLine(t.Describe());
+      Console.WriteLine(b.Describe());
     }
   }
 }

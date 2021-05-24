@@ -14,5 +14,10 @@ namespace LearnInterfaces
     // Properties
     public double Weight { get; }
 
+    // Methods
+    public override string Describe()
+    {
+      return $"This truck is moving on {Wheels} wheels at {Speed} km/h, with license plate {LicensePlate}.";
+    }
   }
 }

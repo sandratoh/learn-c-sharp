@@ -9,5 +9,11 @@ namespace LearnInterfaces
     {
       this.Wheels = 4;
     }
+
+    // Methods
+    public override string Describe()
+    {
+      return $"This sedan is moving on {Wheels} wheels at {Speed} km/h, with license plate {LicensePlate}.";
+    }
   }
 }

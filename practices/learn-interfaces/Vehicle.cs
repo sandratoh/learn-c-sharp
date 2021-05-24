@@ -2,7 +2,7 @@ using System;
 
 namespace LearnInheritance
 {
-  class Vehicle
+  abstract class Vehicle
   {
     public string LicensePlate { get; protected set; }
     public double Speed { get; protected set; }
@@ -21,6 +21,7 @@ namespace LearnInheritance
       Console.WriteLine("HONK!");
     }
 
+    // Virtual/overridable methods
     public virtual void SpeedUp()
     {
       Speed += 5;
@@ -30,6 +31,9 @@ namespace LearnInheritance
     {
       Speed -= 5;
     }
+
+    // Abstract method
+    public abstract string Describe();
   }
 }
 

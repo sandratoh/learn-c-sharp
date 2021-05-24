@@ -75,7 +75,7 @@ class Sedan : Vehicle
 
 - When we want modify inherited methods or values: use `override` and `virtual` modifers (can be added before or after `public`)
 
-  - In super/base class, use `virtual`
+  - In super/base class, use `virtual` - overridable
 
     ```c#
     public virtual void SpeedUp()
@@ -110,3 +110,25 @@ class Sedan : Vehicle
   ```
 
 - Microsoft docs: You want objects that have values that are created from the derived class to use the methods that are defined in the derived class.
+
+## Make Inherited members Abstract
+
+- `abstract` members have no implementation in the superclass, but they must be implemented in all subclass
+
+- When we want a method in all inherited class, but they must all be different from each other
+
+- Add `abstract` line to base class:
+
+  ```c#
+  public abstract string Describe();
+  ```
+
+- Any class that contains an `abstract` method must be an `abstract` class as well - the class itself can't exist as an instance
+
+  - Must also label the class with `abstract` keyword
+
+  ```c#
+  abstract class Vehicle
+  ```
+
+- To implement `abstract` method, need to label the method with `override` in subclasses
