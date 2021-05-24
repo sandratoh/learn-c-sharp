@@ -70,3 +70,43 @@ class Sedan : Vehicle
   }
 }
 ```
+
+## Override Inherited Members
+
+- When we want modify inherited methods or values: use `override` and `virtual` modifers (can be added before or after `public`)
+
+  - In super/base class, use `virtual`
+
+    ```c#
+    public virtual void SpeedUp()
+    ```
+
+  - In subclass, use `override`
+
+    ```c#
+    public override void SpeedUp()
+    ```
+
+- Alternative way - **method hiding** : [define a `new` member with same name](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords)
+
+  - `override` _extends_ the base class `virtual` method, while `new` _hides_ an accessible base class method
+
+  - `new` modifier can be added before or after `public`
+
+  - Using `new` shows the program that you are aware the class member is modifying/hiding an inheritance from base class
+
+### `override` or `new`?
+
+- Typically wants to use `override` instead of `new`
+
+- Possible error in method hiding: a base class reference variable pointing to a child class object will invoke the _hidden method in the Base class_
+
+  - If you want it to invoke the child class method, use `override` instead
+
+  ```c#
+  BaseClass bcdc = new DerivedClass();
+
+  // In method hiding, the method defined in DeriveClass is hidden, and base class method will be invoked
+  ```
+
+- Microsoft docs: You want objects that have values that are created from the derived class to use the methods that are defined in the derived class.

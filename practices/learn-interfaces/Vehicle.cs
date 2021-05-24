@@ -21,12 +21,12 @@ namespace LearnInheritance
       Console.WriteLine("HONK!");
     }
 
-    public void SpeedUp()
+    public virtual void SpeedUp()
     {
       Speed += 5;
     }
 
-    public void SlowDown()
+    public virtual void SlowDown()
     {
       Speed -= 5;
     }
