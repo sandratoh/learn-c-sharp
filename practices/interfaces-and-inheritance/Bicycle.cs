@@ -1,8 +1,8 @@
 using System;
 
-namespace LearnInheritance
+namespace InterfacesAndInheritance
 {
-  class Bicycle
+  class Bicycle : Vehicle
   {
     // Constructor
     public Bicycle(double speed) : base(speed)

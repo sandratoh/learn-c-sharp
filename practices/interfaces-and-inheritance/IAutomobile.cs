@@ -1,6 +1,6 @@
 using System;
 
-namespace LearnInterfaces
+namespace InterfacesAndInheritance
 {
   interface IAutomobile
   {

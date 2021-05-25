@@ -1,6 +1,6 @@
 using System;
 
-namespace LearnInterfaces
+namespace InterfacesAndInheritance
 {
   class Sedan : Vehicle, IAutomobile
   {

@@ -1,6 +1,6 @@
 using System;
 
-namespace LearnInheritance
+namespace InterfacesAndInheritance
 {
   abstract class Vehicle
   {
